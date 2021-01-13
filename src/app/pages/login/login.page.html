@@ -2,7 +2,7 @@
   <div class="container top">
     <img src="/assets/img/logo.png">
 
-    <ion-segment value='login' >
+    <ion-segment (ionChange)='segmentChanged($event)'  value='login' >
       <ion-segment-button value="login">
         <ion-label>Login</ion-label>
       </ion-segment-button>
@@ -55,9 +55,7 @@
   </ion-slides>
 
   <div class="ocean">
-
-    <div class="waves"></div>
-
+    <div class="waves" [ngStyle]="{'background-position-x': wavesPosition + 'px' }"></div>
     <div class="container bottom ion-text-center ">
       <span>Aplicativo feito para gerenciamento dos produtos da sua loja de surf</span>
     </div>
