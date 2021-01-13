@@ -2,7 +2,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  width:  75%;
+  width: 75%;
   margin: 0 auto;
   z-index: 2;
 
@@ -20,12 +20,12 @@
 }
 
 ion-slides {
-  height: 100% ;
+  height: 100%;
 
   .slide-inner {
-    width: 75% ;
-    color: #fff; 
-    background-color: #0071bc; 
+    width: 75%;
+    color: #fff;
+    background-color: #0071bc;
     border-radius: 10px;
 
     ion-item {
@@ -35,7 +35,7 @@ ion-slides {
       ion-input {
         color: #fff;
       }
-     }
+    }
   }
 }
 
@@ -44,9 +44,9 @@ ion-slides {
   left: 0;
   right: 0;
   bottom: 0;
-  height:  45%;
+  height: 45%;
   background: var(--ion-color-primary);
- 
+
   .waves {
     position: absolute;
     top: -100px;
@@ -55,6 +55,6 @@ ion-slides {
     height: 100px;
     background-image: url('/assets/img/waves.png');
     background-size: contain;
-    transition: all 0.5s; 
+    transition: all 0.5s;
   }
 }
