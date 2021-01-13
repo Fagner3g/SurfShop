@@ -12,8 +12,8 @@
     </ion-segment>
   </div>
 
-  <ion-slides>
-    <ion-slide>
+  <ion-slides (ionSlideDidChange)="slideChenged()">
+    <ion-slide value="login">
       <div class="slide-inner ion-padding">
         <span>Login</span>
 
@@ -29,7 +29,7 @@
       </div>
     </ion-slide>
 
-    <ion-slide>
+    <ion-slide value="cadastro">
       <div class="slide-inner ion-padding">
         <span>Cadastro</span>
 
