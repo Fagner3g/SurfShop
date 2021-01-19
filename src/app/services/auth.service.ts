@@ -17,8 +17,4 @@ export class AuthService {
   }
 
   logout() {}
-
-  getAuth() {
-    return this.afa.authState;
-  }
 }

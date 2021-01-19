@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: 'AIzaSyDaGPe5Cqwpj0-gGD0PfjmtTV4DxXt-W1Y',
+    authDomain: 'surfshop-79299.firebaseapp.com',
+    projectId: 'surfshop-79299',
+    storageBucket: 'surfshop-79299.appspot.com',
+    messagingSenderId: '407483471787',
+    appId: '1:407483471787:web:1cff14bb8ae2b6a84924ee',
+    measurementId: 'G-8RNDXFPCN5',
+  },
 };
 
 /*
