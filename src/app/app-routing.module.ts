@@ -19,6 +19,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then((m) => m.LoginPageModule),
     canActivate: [LoginGuard],
   },
+  {
+    path: 'details',
+    loadChildren: () => import('./pages/details/details.module').then((m) => m.DetailsPageModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () => import('./pages/details/details.module').then((m) => m.DetailsPageModule),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

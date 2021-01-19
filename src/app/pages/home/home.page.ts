@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../interfaces/product';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +11,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  constructor() {}
+  public products = new Array<Product>();
+  private productsSubscription: Subscription;
 
-  ngOnInit() {}
+  constructor(private productsService: ProductService, private authService: AuthService) {}
+
+  ngOnInit() {
+    this.productsSubscription = this.productsService.getProducts().subscribe((data) => {
+      this.products = data;
+    });
+  }
+
+  deleteProduct(id: string) {}
+
+  async logout() {
+    try {
+      await this.authService.logout();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  ngOnDestroy() {
+    this.productsSubscription.unsubscribe();
+  }
 }
