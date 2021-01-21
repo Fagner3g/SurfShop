@@ -26,11 +26,19 @@ export class ProductService {
     );
   }
 
-  addProduct(product: Product) {}
+  addProduct(product: Product) {
+    return this.productsCollection.add(product);
+  }
 
-  getProduct(id: string) {}
+  getProduct(id: string) {
+    return this.productsCollection.doc<Product>(id).valueChanges();
+  }
 
-  updateProduct(id: string, product: Product) {}
+  updateProduct(id: string, product: Product) {
+    return this.productsCollection.doc<Product>(id).update(product);
+  }
 
-  deleteProduct(id: string) {}
+  deleteProduct(id: string) {
+    return this.productsCollection.doc(id).delete();
+  }
 }
