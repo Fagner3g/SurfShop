@@ -29,9 +29,9 @@ export class HomePage implements OnInit {
 
   async deleteProduct(id: string) {
     try {
-      this.productsService.deleteProduct(id);
+      await this.productsService.deleteProduct(id);
     } catch (error) {
-      this.presentToast('Erro ao tentar salvar');
+      this.presentToast('Erro ao tentar deletar item');
       console.error(error);
     }
   }
